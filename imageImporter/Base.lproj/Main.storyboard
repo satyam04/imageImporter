@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageImporter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_image" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-zl-549">
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="6Af-2L-nvJ"/>
+                                    <constraint firstAttribute="height" constant="300" id="gzB-mC-wVx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-Uu-du2">
+                                <rect key="frame" x="0.0" y="341" width="375" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.85619113869863017" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="y8h-Ar-Hg0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="ADD Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gch-1K-acq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kgC-zl-549" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6ym-im-mKH"/>
+                            <constraint firstItem="kgC-zl-549" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EoR-kr-74m"/>
+                            <constraint firstItem="Ea4-Uu-du2" firstAttribute="top" secondItem="kgC-zl-549" secondAttribute="bottom" constant="21" id="TYD-Io-tkn"/>
+                            <constraint firstItem="kgC-zl-549" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X0c-jR-4Bt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ea4-Uu-du2" secondAttribute="bottom" constant="287" id="kgH-qu-Prr"/>
+                            <constraint firstItem="Ea4-Uu-du2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lhE-dX-Ck9"/>
+                            <constraint firstItem="Ea4-Uu-du2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nCs-7b-YwO"/>
+                            <constraint firstItem="Ea4-Uu-du2" firstAttribute="top" secondItem="kgC-zl-549" secondAttribute="bottom" constant="21" id="vUR-RP-378"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Addbutton" destination="Ea4-Uu-du2" id="kvF-Qv-65h"/>
+                        <outlet property="myImageView" destination="kgC-zl-549" id="jEb-VE-TJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default_image" width="400" height="300"/>
+    </resources>
+</document>
